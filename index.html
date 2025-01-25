@@ -1,65 +1,210 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Professional portfolio website showcasing skills and projects">
-    
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Professional portfolio website showcasing skills and projects"
+    />
+
     <!-- Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
-    
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+
     <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+
     <!-- Custom CSS -->
-    <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="animations.css">
-    
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="animations.css" />
+
     <!-- EmailJS -->
     <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
-    
-    <!-- International Phone Input -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/intl-tel-input@18.1.1/build/css/intlTelInput.css">
-    <script src="https://cdn.jsdelivr.net/npm/intl-tel-input@18.1.1/build/js/intlTelInput.min.js"></script>
-    
-    <title>Portfolio</title>
-</head>
-<body>
-    <!-- Header Section -->
-    <header>
-        <nav>
-            <!-- Navigation links will be added here -->
-        </nav>
-    </header>
 
-    <!-- Main Content -->
-    <main>
+    <!-- International Phone Input -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/intl-tel-input@18.1.1/build/css/intlTelInput.css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/intl-tel-input@18.1.1/build/js/intlTelInput.min.js"></script>
+
+    <title>Portfolio</title>
+  </head>
+  <body>
+    <div class="fade-in">
+      <!-- Header Section -->
+      <header>
+        <div class="logo">Raed Masri</div>
+        <nav class="nav-links">
+          <a href="https://github.com" target="_blank">
+            <img
+              src="https://img.icons8.com/ios-glyphs/30/github.png"
+              alt="GitHub"
+            />
+            GitHub
+          </a>
+          <a href="https://linkedin.com" target="_blank">
+            <img
+              src="https://img.icons8.com/ios-filled/30/linkedin.png"
+              alt="LinkedIn"
+            />
+            LinkedIn
+          </a>
+          <a href="mailto:example@example.com" id="email">
+            <img
+              src="https://img.icons8.com/?size=100&id=12623&format=png&color=FFFFFF"
+              alt="Email"
+            />
+            Email
+          </a>
+        </nav>
+      </header>
+
+      <!-- Main Content -->
+      <main>
         <!-- Hero Section -->
         <section id="home" class="hero-section">
-            <!-- Hero content will be added here -->
+          <div class="hero-text">
+            <h1>Hi, I'm Raed 👋</h1>
+            <p>
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ullam
+              sint, praesentium ipsum aliquam vero est ea enim eos repudiandae
+              magni ipsam assumenda error cumque accusamus vel alias distinctio
+              in iste.
+            </p>
+            <div class="buttons">
+              <a href="#skills">Skills</a>
+              <a href="#testimony">Testimony</a>
+              <a href="#contact">Contact</a>
+            </div>
+          </div>
+          <img src="./images/hero-headshot.webp" alt="John Doe" />
         </section>
 
         <!-- Skills Section -->
         <section id="skills" class="skills-section">
-            <!-- Skills content will be dynamically added -->
+          <h2>Skills</h2>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates,
+            perspiciatis iure distinctio quidem.
+          </p>
+          <div class="skills-icons">
+            <div class="icon">
+              <img src="./images/html-logo.webp" alt="HTML" />
+              <span>HTML</span>
+            </div>
+            <div class="icon">
+              <img src="./images/css-logo.webp" alt="CSS" />
+              <span>CSS</span>
+            </div>
+            <div class="icon">
+              <img src="./images/javascript-logo.webp" alt="JavaScript" />
+              <span>JavaScript</span>
+            </div>
+            <div class="icon">
+              <img src="./images/node-logo.webp" alt="Node.js" />
+              <span>Node.js</span>
+            </div>
+            <div class="icon">
+              <img src="./images/react-logo.webp" alt="React.js" />
+              <span>React.js</span>
+            </div>
+          </div>
         </section>
-
+        
+          <section class="testimony">
+              <h2>Testimony</h2>
+              <div class="testimony-content">
+                  <img src="./images/testimony-headshot.webp" alt="John Doe">
+                  <div class="testimony-text">
+                      <blockquote>
+                          "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolor, sint repudiandae ratione exercitationem saepe distinctio cumque."
+                      </blockquote>
+                      <strong>John Doe</strong>
+                      <p>Lorem ipsum dolor sit.</p>
+                  </div>
+              
+          </section>
+  
         <!-- Projects Section -->
         <section id="projects" class="projects-section">
-            <!-- Projects will be dynamically added -->
+          <!-- Projects will be dynamically added -->
         </section>
 
         <!-- Contact Section -->
         <section id="contact" class="contact-section">
-            <form id="contact-form">
-                <!-- Contact form will be added here -->
-            </form>
-        </section>
-    </main>
+          <h2>Contact Us</h2>
+          <div class="container">
+            <!-- Left Text -->
+            <div class="left">
+              <p>
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quod hic officiis sint eveniet, numquam atque quia sunt debitis ad magnam fugiat culpa id suscipit odio recusandae aliquam. Laudantium, unde nihil.
+              </p>
+            </div>
 
+            <!-- Right Form -->
+            <div class="right">
+              <form id="contact-form">
+                <div>
+                  <label for="name" class="form-label">Name</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="name"
+                    placeholder="Your Name"
+                    required
+                  />
+                </div>
+                <div>
+                  <label for="email" class="form-label">Email</label>
+                  <input
+                    type="email"
+                    class="form-control"
+                    id="email"
+                    placeholder="Your Email"
+                    required
+                  />
+                </div>
+                <div >
+                  <label for="phone" class="form-label">Phone Number</label>
+                  <div class="d-flex">
+                   
+                    <input
+                      type="tel"
+                      class="form-control"
+                      id="phone"
+                      placeholder="Your Phone Number"
+                      style="flex: 1"
+                      required
+                    />
+                  </div>
+                </div>
+                <div >
+                  <label for="message" class="form-label">Message</label>
+                  <textarea
+                    class="form-control"
+                    id="message"
+                    rows="4"
+                    placeholder="Your Message"
+                    required
+                  ></textarea>
+                </div>
+                <button type="submit" class="submit-btn">Submit</button>
+              </form>
+            </div>
+          </div>
+        </section>
+      </main>
+    </div>
     <!-- Custom JavaScript -->
     <script src="script.js"></script>
-</body>
+  </body>
 </html>
