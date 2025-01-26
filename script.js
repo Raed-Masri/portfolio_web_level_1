@@ -1,68 +1,66 @@
 // Initialize EmailJS
-// document.addEventListener('DOMContentLoaded', function() {
-//     // Replace with your EmailJS public key
-//     emailjs.init("YOUR_PUBLIC_KEY");
-// });
 
-emailjs.init("BOsI5N1534ojq81UO");
-document
-  .getElementById("contact-form")
-  .addEventListener("submit", async function (e) {
-    e.preventDefault();
+  emailjs.init("BOsI5N1534ojq81UO");
+  document
+    .getElementById("contact-form")
+    .addEventListener("submit", async function (e) {
+      e.preventDefault();
 
-    const name = document.getElementById("name").value.trim();
-    const email = document.getElementById("email").value.trim();
-    const message = document.getElementById("message").value.trim();
-    const responseMessage = document.getElementById("response-message");
+      const name = document.getElementById("name").value.trim();
+      const email = document.getElementById("email").value.trim();
+      const phone = document.getElementById("phone").value.trim();
+      const message = document.getElementById("message").value.trim();
+      const responseMessage = document.getElementById("response-message");
 
-    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    if (!emailRegex.test(email)) {
-      alert("Please enter a valid email address.");
-      return;
-    }
-
-    if (!name || !email || !message) {
-      responseMessage.style.color = "red";
-      responseMessage.textContent = "All fields are required.";
-      return;
-    }
-
-    const templateParams = {
-      name,
-      email,
-      message,
-    };
-
-    try {
-      const response = await fetch(
-        "https://api.emailjs.com/api/v1.0/email/send",
-        {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-          },
-          body: JSON.stringify({
-            service_id: "service_tl2tgin",
-            template_id: "template_gigjqmh",
-            user_id: "BOsI5N1534ojq81UO",
-            template_params: templateParams,
-          }),
-        }
-      );
-
-      if (response.ok) {
-        responseMessage.style.color = "green";
-        responseMessage.textContent = "Message sent successfully!";
-        document.getElementById("contact-form").reset(); // Clear the form
-      } else {
-        responseMessage.style.color = "red";
-        responseMessage.textContent = "Failed to send message.";
+      const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+      if (!emailRegex.test(email)) {
+        alert("Please enter a valid email address.");
+        return;
       }
-    } catch (error) {
-      responseMessage.style.color = "red";
-      responseMessage.textContent = "An unexpected error occurred.";
-    }
-  });
+
+      if (!name || !email || !phone || !message) {
+        responseMessage.style.color = "red";
+        responseMessage.textContent = "All fields are required.";
+        return;
+      }
+
+      const templateParams = {
+        name,
+        email,
+        phone,
+        message,
+      };
+
+      try {
+        const response = await fetch(
+          "https://api.emailjs.com/api/v1.0/email/send",
+          {
+            method: "POST",
+            headers: {
+              "Content-Type": "application/json",
+            },
+            body: JSON.stringify({
+              service_id: "service_tl2tgin",
+              template_id: "template_gigjqmh",
+              user_id: "BOsI5N1534ojq81UO",
+              template_params: templateParams,
+            }),
+          }
+        );
+
+        if (response.ok) {
+          responseMessage.style.color = "green";
+          responseMessage.textContent = "Message sent successfully!";
+          document.getElementById("contact-form").reset(); // Clear the form
+        } else {
+          responseMessage.style.color = "red";
+          responseMessage.textContent = "Failed to send message.";
+        }
+      } catch (error) {
+        responseMessage.style.color = "red";
+        responseMessage.textContent = "An unexpected error occurred.";
+      }
+    });
 
 // Skills Data ------------------------------------------------------------------------------------
 const skillsData = [
@@ -105,8 +103,8 @@ skillsData.forEach((skill) => {
 // Projects Data---------------------------------------------------------------------------------------
 const projectsData = [
   {
-    title: "Project One",
-    image: "images/project1.webp",
+    title: "Netflix Clone",
+    image: "netflix.jpg",
     description: "Description of project one goes here.",
     tags: ["HTML", "CSS", "JavaScript"],
     links: {
@@ -116,7 +114,7 @@ const projectsData = [
   },
   {
     title: "Real-time Chat Application",
-    image: "https://via.placeholder.com/300x180",
+    image: "chat-app.jpg",
     description:
       "A modern chat application with real-time messaging, file sharing, and group chat functionality. Includes user presence indicators and message notifications.",
     tags: ["Node.js", "Socket.io", "MongoDB"],
@@ -127,7 +125,7 @@ const projectsData = [
   },
   {
     title: "E-commerce Platform",
-    image: "https://via.placeholder.com/300x180",
+    image: "shopping-online.jpg",
     description:
       "A full-featured e-commerce platform with product catalog, shopping cart, payment integration, and order management system.",
     tags: ["React", "Node.js", "Stripe", "MongoDB"],
@@ -138,7 +136,7 @@ const projectsData = [
   },
   {
     title: "Weather Dashboard",
-    image: "https://via.placeholder.com/300x180",
+    image: "weather.jpg",
     description:
       "An interactive weather dashboard with real-time weather data, 7-day forecast, and location-based weather information using geolocation.",
     tags: ["JavaScript", "API", "CSS"],

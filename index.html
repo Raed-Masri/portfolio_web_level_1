@@ -58,7 +58,7 @@
             />
             LinkedIn
           </a>
-          <a href="mailto:example@example.com" id="email">
+          <a href="mailto:example@example.com" id="email-nav">
             <img
               src="https://img.icons8.com/?size=100&id=12623&format=png&color=FFFFFF"
               alt="Email"
@@ -81,9 +81,10 @@
               in iste.
             </p>
             <div class="buttons">
-              <a href="#skills">Skills</a>
-              <a href="#testimony">Testimony</a>
+              <a href="#skills">✍️ Skills</a>
+              <a href="#testimony-section">Testimony</a>
               <a href="#contact">Contact</a>
+              
             </div>
           </div>
           <img src="./images/hero-headshot.webp" alt="John Doe" />
@@ -107,7 +108,7 @@
 
 
         
-          <section class="testimony">
+          <section class="testimony" id="testimony-section">
               <h2>Testimony</h2>
               <div class="testimony-content">
                   <img src="./images/testimony-headshot.webp" alt="John Doe">
@@ -140,7 +141,7 @@
             <!-- Right Form -->
             <div class="right">
               <form id="contact-form">
-                <div>
+                
                   <label for="name" class="form-label">Name</label>
                   <input
                     type="text"
@@ -149,8 +150,8 @@
                     placeholder="Your Name"
                     required
                   />
-                </div>
-                <div>
+                
+                
                   <label for="email" class="form-label">Email</label>
                   <input
                     type="email"
@@ -159,8 +160,8 @@
                     placeholder="Your Email"
                     required
                   />
-                </div>
-                <div >
+                
+                
                   <label for="phone" class="form-label">Phone Number</label>
                   <div class="d-flex">
                    
@@ -172,9 +173,9 @@
                       style="flex: 1"
                       required
                     />
-                  </div>
+                  
                 </div>
-                <div >
+                
                   <label for="message" class="form-label">Message</label>
                   <textarea
                     class="form-control"
@@ -183,9 +184,10 @@
                     placeholder="Your Message"
                     required
                   ></textarea>
-                </div>
-                <button type="submit" class="submit-btn">Submit</button>
+                
+                <input type="submit" class="submit-btn" value="Send Message"></input>
               </form>
+              <div id="response-message"></div>
             </div>
           </div>
         </section>
