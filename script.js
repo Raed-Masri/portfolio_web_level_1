@@ -1,66 +1,66 @@
 // Initialize EmailJS
 
-  emailjs.init("BOsI5N1534ojq81UO");
-  document
-    .getElementById("contact-form")
-    .addEventListener("submit", async function (e) {
-      e.preventDefault();
+emailjs.init("BOsI5N1534ojq81UO");
+document
+  .getElementById("contact-form")
+  .addEventListener("submit", async function (e) {
+    e.preventDefault();
 
-      const name = document.getElementById("name").value.trim();
-      const email = document.getElementById("email").value.trim();
-      const phone = document.getElementById("phone").value.trim();
-      const message = document.getElementById("message").value.trim();
-      const responseMessage = document.getElementById("response-message");
+    const name = document.getElementById("name").value.trim();
+    const email = document.getElementById("email").value.trim();
+    const phone = document.getElementById("phone").value.trim();
+    const message = document.getElementById("message").value.trim();
+    const responseMessage = document.getElementById("response-message");
 
-      const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-      if (!emailRegex.test(email)) {
-        alert("Please enter a valid email address.");
-        return;
-      }
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailRegex.test(email)) {
+      alert("Please enter a valid email address.");
+      return;
+    }
 
-      if (!name || !email || !phone || !message) {
-        responseMessage.style.color = "red";
-        responseMessage.textContent = "All fields are required.";
-        return;
-      }
+    if (!name || !email || !phone || !message) {
+      responseMessage.style.color = "red";
+      responseMessage.textContent = "All fields are required.";
+      return;
+    }
 
-      const templateParams = {
-        name,
-        email,
-        phone,
-        message,
-      };
+    const templateParams = {
+      name,
+      email,
+      phone,
+      message,
+    };
 
-      try {
-        const response = await fetch(
-          "https://api.emailjs.com/api/v1.0/email/send",
-          {
-            method: "POST",
-            headers: {
-              "Content-Type": "application/json",
-            },
-            body: JSON.stringify({
-              service_id: "service_tl2tgin",
-              template_id: "template_gigjqmh",
-              user_id: "BOsI5N1534ojq81UO",
-              template_params: templateParams,
-            }),
-          }
-        );
-
-        if (response.ok) {
-          responseMessage.style.color = "green";
-          responseMessage.textContent = "Message sent successfully!";
-          document.getElementById("contact-form").reset(); // Clear the form
-        } else {
-          responseMessage.style.color = "red";
-          responseMessage.textContent = "Failed to send message.";
+    try {
+      const response = await fetch(
+        "https://api.emailjs.com/api/v1.0/email/send",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({
+            service_id: "service_tl2tgin",
+            template_id: "template_gigjqmh",
+            user_id: "BOsI5N1534ojq81UO",
+            template_params: templateParams,
+          }),
         }
-      } catch (error) {
+      );
+
+      if (response.ok) {
+        responseMessage.style.color = "green";
+        responseMessage.textContent = "Message sent successfully!";
+        document.getElementById("contact-form").reset(); // Clear the form
+      } else {
         responseMessage.style.color = "red";
-        responseMessage.textContent = "An unexpected error occurred.";
+        responseMessage.textContent = "Failed to send message.";
       }
-    });
+    } catch (error) {
+      responseMessage.style.color = "red";
+      responseMessage.textContent = "An unexpected error occurred.";
+    }
+  });
 
 // Skills Data ------------------------------------------------------------------------------------
 const skillsData = [

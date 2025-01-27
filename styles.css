@@ -20,14 +20,14 @@ body {
   color: var(--text-color);
   background-color: var(--background-color);
 }
-header {
+nav {
   width: 100%;
   max-width: 1200px;
   margin: 0 auto;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1rem 1rem;
+  padding: 1rem 2rem;
 }
 
 .logo {
@@ -60,7 +60,7 @@ header {
 .nav-links a:hover {
   color: var(--primary-color);
 }
-#email-nav{
+#email-nav {
   background-color: var(--text-color);
   color: var(--white);
   padding: 5px 18px;
@@ -145,33 +145,39 @@ section {
 
 .skills-icons {
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
   gap: 80px;
-  flex-wrap: wrap;
-  
+  margin-top: 20px;
 }
 
 .skills-icons .icon {
-  text-align: center;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px;
+  border: 1px solid var(--gray); /* Blue border */
+  border-radius: 10px;
+  width: auto;
 }
 
 .skills-icons .icon img {
-  width: 30px;
-  height: 30px;
-  
+  width: 60px; /* Adjust size of the image */
+  height: 60px;
+  object-fit: contain;
 }
 
 .skills-icons .icon span {
-  font-size: 0.9rem;
-  color: #555;
+  font-size: 16px;
+  font-weight: bold;
+  color: #4a90e2;
 }
-
 
 /*-----------------------------------------------------------------------------------------------------------*/
 h1 {
   text-align: center;
-  font-size: 2.5rem;
-  margin-bottom: 2rem;
+  font-size: 2rem;
+  margin-bottom: 20px;
 }
 
 .project-container {
@@ -263,8 +269,8 @@ h1 {
 }
 
 .testimony img {
-  width: 120px;
-  height: 120px;
+  width: 200px;
+  height: 200px;
   border-radius: 50%;
 }
 
