@@ -78,6 +78,7 @@ section {
   grid-template-columns: 2fr 1fr;
   align-items: center; /* Vertically align text and image */
   max-width: 1000px; /* Allow more space for the content */
+  
 }
 
 .hero-text {
@@ -124,6 +125,8 @@ section {
   border-radius: 50%;
   object-fit: cover;
   margin-left: 50px;
+  margin-top: 30px; /* Align image with the content */
+  max-width: 100%;
 }
 
 /*----------------------------------------------------------------------------------------------*/
@@ -145,25 +148,24 @@ section {
 
 .skills-icons {
   display: flex;
-  flex-wrap: wrap;
   justify-content: center;
-  gap: 80px;
+  gap: 20px;
   margin-top: 20px;
 }
 
 .skills-icons .icon {
   display: flex;
-  align-items: center;
+  justify-content: center;
   gap: 10px;
   padding: 10px;
-  border: 1px solid var(--gray); /* Blue border */
+  border: 1px solid var(--primary-color);
   border-radius: 10px;
-  width: auto;
+  width: 200px;
 }
 
 .skills-icons .icon img {
-  width: 60px; /* Adjust size of the image */
-  height: 60px;
+  width: 20px;
+  height: 20px;
   object-fit: contain;
 }
 
@@ -262,7 +264,7 @@ h1 {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 20px;
+  gap: 60px;
   max-width: 800px;
   margin: 0 auto;
   text-align: left;
@@ -284,10 +286,6 @@ h1 {
 .testimony-person strong {
   font-size: 1.1rem;
   color: #333;
-}
-
-.testimony-text {
-  flex: 1;
 }
 
 .testimony-text blockquote {
