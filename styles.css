@@ -23,7 +23,6 @@ body {
 nav {
   width: 100%;
   max-width: 1200px;
-  margin: 0 auto;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -76,7 +75,6 @@ section {
   display: grid;
   grid-template-columns: 2fr 1fr;
   align-items: center;
-  max-width: 900px;
 }
 
 .hero-text {
@@ -119,8 +117,8 @@ section {
 }
 
 .hero-section img {
-  width: 200px;
-  height: 200px;
+  width: 300px;
+  height: 300px;
   border-radius: 50%;
   object-fit: cover;
   margin-left: 50px;
@@ -305,11 +303,6 @@ h1 {
   color: #555;
 }
 /*---------------------------------------------------------------------------------*/
-.contact-section {
-  padding: 50px;
-  width: 80%;
-  max-width: 1000px;
-}
 
 .contact-section .container {
   display: flex;
@@ -332,15 +325,9 @@ h1 {
   flex: 1;
 }
 
-.contact-section form {
-  grid-template-columns: 1fr 1fr;
-  gap: 1.5rem;
-}
-
 .contact-section label {
   font-size: 14px;
-  color: #555;
-  display: block;
+  color: var(--gray);
   margin-bottom: 0.5rem;
 }
 
@@ -359,34 +346,10 @@ h1 {
   height: 120px;
 }
 
-.contact-section button {
-  grid-column: span 2;
-  padding: 12px 20px;
-  font-size: 16px;
-  background-color: var(--primary-color);
-  color: white;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  text-align: center;
-}
-
-.contact-section button:hover {
-  background-color: var(--primary-color);
-}
-
-.info {
-  font-size: 14px;
-  color: #666;
-  text-align: center;
-  margin-top: 2rem;
-}
-
 .submit-btn {
   background-color: var(--primary-color);
   color: white;
   border: none;
-  padding: 10px 20px;
   cursor: pointer;
   border-radius: 5px;
 }
@@ -424,10 +387,9 @@ h1 {
 @media screen and (max-width: 768px) {
   /* General Adjustments */
   .nav-links a span {
-    display: none; 
+    display: none;
   }
 
-  
   .container {
     flex-direction: column;
     gap: 40px;
@@ -504,7 +466,7 @@ h1 {
     font-size: 0.8rem;
   }
   .hero-section h1 {
-    font-size: 2rem; 
+    font-size: 2rem;
   }
 
   .hero-section p {
@@ -516,5 +478,4 @@ h1 {
     font-size: 0.8rem;
     padding: 8px 15px;
   }
-  
 }

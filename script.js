@@ -1,5 +1,3 @@
-// Initialize EmailJS
-
 emailjs.init("BOsI5N1534ojq81UO");
 document
   .getElementById("contact-form")
@@ -166,10 +164,10 @@ projectsData.forEach((project) => {
                     <div class="links">
                         <a href="${
                           project.links.github
-                        }" target="_blank">Code</a>
+                        }" target="_blank"><i class="fab fa-github"></i> Code</a>
                         <a href="${
                           project.links.demo
-                        }" target="_blank">Live Demo</a>
+                        }" target="_blank"><i class="fas fa-tv"></i> Live Demo</a>
                     </div>
                 </div>
             `;
@@ -187,4 +185,3 @@ if (phoneInput) {
   });
 }
 
-// Form validation and submission will be added later
