@@ -46,7 +46,6 @@ nav {
   text-decoration: none;
   color: #333;
   font-size: 1rem;
-  transition: color 0.3s;
   display: flex;
   align-items: center;
   gap: 8px;
@@ -76,9 +75,8 @@ section {
 .hero-section {
   display: grid;
   grid-template-columns: 2fr 1fr;
-  align-items: center; /* Vertically align text and image */
-  max-width: 1000px; /* Allow more space for the content */
-  
+  align-items: center;
+  max-width: 900px;
 }
 
 .hero-text {
@@ -106,6 +104,7 @@ section {
 .hero-section .buttons a {
   display: inline-block;
   padding: 10px 20px;
+  width: 130px;
   text-decoration: none;
   border: 1px solid var(--primary-color);
   border-radius: 5px;
@@ -115,8 +114,8 @@ section {
 }
 
 .hero-section .buttons a:hover {
-  background-color: var(--primary-color);
-  color: #fff;
+  border-color: var(--text-color);
+  color: var(--text-color);
 }
 
 .hero-section img {
@@ -125,7 +124,7 @@ section {
   border-radius: 50%;
   object-fit: cover;
   margin-left: 50px;
-  margin-top: 30px; /* Align image with the content */
+  margin-top: 30px;
   max-width: 100%;
 }
 
@@ -161,6 +160,9 @@ section {
   border: 1px solid var(--primary-color);
   border-radius: 10px;
   width: 200px;
+}
+.skills-icons .icon:hover {
+  transform: translateY(-5px);
 }
 
 .skills-icons .icon img {
@@ -204,6 +206,10 @@ h1 {
   width: 100%;
   height: 180px;
   object-fit: cover;
+}
+.project-card img:hover {
+  transition: transform 0.3s ease;
+  transform: scale(1.1);
 }
 
 .project-card .content {
@@ -274,6 +280,10 @@ h1 {
   width: 200px;
   height: 200px;
   border-radius: 50%;
+}
+.testimony img:hover {
+  transition: transform 0.3s ease;
+  transform: scale(1.1);
 }
 
 .testimony-person {
@@ -384,42 +394,127 @@ h1 {
 .submit-btn:hover {
   background-color: #45a049;
 }
-/* Responsive Design -------------------------------------------------------- */
+/* Responsive Design -------------------------------------------------------------- */
+@media (max-width: 1024px) {
+  nav {
+    padding: 1rem;
+  }
+  .logo {
+    padding-left: 0;
+  }
+  .hero-section {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+  .hero-section img {
+    margin: 0 auto;
+  }
+  .hero-section .buttons {
+    justify-content: center;
+  }
+  .skills-icons {
+    flex-direction: column;
+    align-items: center;
+  }
+  .testimony-content {
+    flex-direction: column;
+    text-align: center;
+  }
+}
 @media screen and (max-width: 768px) {
-  .hero-text h1 {
-    font-size: 2rem;
+  /* General Adjustments */
+  .nav-links a span {
+    display: none; 
   }
 
-  .hero-text p {
-    font-size: 0.875rem;
+  
+  .container {
+    flex-direction: column;
+    gap: 40px;
   }
 
-  .skills-icons div {
-    width: 80px;
-    height: 80px; /* Reduce icon size */
-    font-size: 0.75rem;
+  /* Contact Section */
+  .contact-section .container {
+    flex-direction: column;
+  }
+
+  .contact-section .left,
+  .contact-section .right {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
+  .contact-section form {
+    gap: 15px;
+  }
+
+  .contact-section button {
+    width: 100%;
+  }
+
+  .contact-section p,
+  .contact-section .info {
+    font-size: 0.9rem;
+  }
+
+  /* Testimony Section */
+  .testimony-content {
+    flex-direction: column;
+    text-align: center;
+    gap: 20px;
+  }
+
+  .testimony img {
+    width: 120px;
+    height: 120px;
+  }
+
+  .testimony-text blockquote {
+    font-size: 0.9rem;
+  }
+
+  .testimony-person strong {
+    font-size: 1rem;
   }
 }
 
 @media screen and (max-width: 480px) {
-  header {
-    flex-wrap: wrap; /* Stack header items */
-    justify-content: center;
-    gap: 1rem;
+  h2 {
+    font-size: 1.5rem;
   }
 
-  .hero-section img {
-    max-width: 80%; /* Further reduce image size */
+  /* Contact Section */
+  .contact-section input,
+  .contact-section textarea {
+    font-size: 0.9rem;
+    padding: 10px;
   }
 
-  button,
-  .btn {
-    display: block; /* Stack buttons vertically */
-    margin: 0.5rem auto;
+  .contact-section .info {
+    font-size: 0.85rem;
   }
 
-  .skills-icons div {
-    width: 70px;
-    height: 70px; /* Further reduce icon size */
+  /* Testimony Section */
+  .testimony img {
+    width: 100px;
+    height: 100px;
   }
+
+  .testimony-text blockquote {
+    font-size: 0.8rem;
+  }
+  .hero-section h1 {
+    font-size: 2rem; 
+  }
+
+  .hero-section p {
+    font-size: 0.9rem;
+    margin-bottom: 20px;
+  }
+
+  .hero-section .buttons a {
+    font-size: 0.8rem;
+    padding: 8px 15px;
+  }
+  
 }

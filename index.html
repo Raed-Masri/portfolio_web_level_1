@@ -41,38 +41,30 @@
   <body>
     <div class="fade-in">
       <nav>
-      <!-- Header Section -->
+        <!-- Header Section -->
         <div class="logo">Raed Masri</div>
         <div class="nav-links">
           <a href="https://github.com" target="_blank">
-            <img
-              src="https://img.icons8.com/ios-glyphs/30/github.png"
-              alt="GitHub"
-            />
-            GitHub
+            <img src="https://img.icons8.com/ios-glyphs/30/github.png" alt="GitHub" />
+            <span>GitHub</span>
           </a>
           <a href="https://linkedin.com" target="_blank">
-            <img
-              src="https://img.icons8.com/ios-filled/30/linkedin.png"
-              alt="LinkedIn"
-            />
-            LinkedIn
+            <img src="https://img.icons8.com/ios-filled/30/linkedin.png" alt="LinkedIn" />
+            <span>LinkedIn</span>
           </a>
           <a href="mailto:example@example.com" id="email-nav">
-            <img
-              src="https://img.icons8.com/?size=100&id=12623&format=png&color=FFFFFF"
-              alt="Email"
-            />
-            Email
+            <img src="https://img.icons8.com/?size=100&id=12623&format=png&color=FFFFFF" alt="Email" />
+            <span>Email</span>
           </a>
         </div>
-        </nav>
-      </header>
+      </nav>
+      
 
       <!-- Main Content -->
       <main>
         <!-- Hero Section -->
         <section id="home" class="hero-section">
+          <img src="./images/hero-headshot.webp" alt="Raed Masri" />
           <div class="hero-text">
             <h1>Hi, I'm Raed 👋</h1>
             <p>
@@ -82,60 +74,52 @@
               in iste.
             </p>
             <div class="buttons">
-              <a href="#skills"><span class="icon">&#60;&#47;&#62;</span> Skills</a>
-              <a href="#testimony-section"><span class="icon">&#9998;</span>Testimony</a>
+              <a href="#skills"
+                ><span class="icon">&#60;&#47;&#62;</span> Skills</a
+              >
+              <a href="#testimony-section"
+                ><span class="icon">&#9998;</span>Testimony</a
+              >
               <a href="#contact"><span class="icon">&#9993;</span> Contact</a>
-              
             </div>
           </div>
-          <img src="./images/hero-headshot.webp" alt="John Doe" />
         </section>
 
         <!-- Skills Section -->
         <section id="skills" class="skills-section">
           <h2>Skills</h2>
           <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab voluptatibus deleniti excepturi quos hic similique blanditiis possimus fuga, illo, expedita architecto facere molestias enim ea dicta officia, veniam quaerat atque.
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab
+            voluptatibus deleniti excepturi quos hic similique blanditiis
+            possimus fuga, illo, expedita architecto facere molestias enim ea
+            dicta officia, veniam quaerat atque.
           </p>
           <div class="skills-icons" id="skills-container"></div>
-      </section>
-
+        </section>
 
         <section>
           <h1>Projects</h1>
           <div class="project-container" id="project-container"></div>
         </section>
 
-
-        
-          <!-- <section class="testimony" id="testimony-section">
-              <h2>Testimony</h2>
-              <div class="testimony-content">
-                  <img src="./images/testimony-headshot.webp" alt="John Doe">
-                  <div class="testimony-text">
-                      <blockquote>
-                          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Culpa quae quaerat ducimus a dolorum eos qui aspernatur dolores vitae consequuntur debitis adipisci ipsa incidunt commodi molestiae dignissimos eaque, deserunt eligendi.
-                      </blockquote>
-                      <strong>John Doe</strong>
-                      <p>Lorem ipsum dolor sit.</p>
-                  </div>
-              </section> -->
-  
-              <section class="testimony" id="testimony-section">
-                <h2>Testimony</h2>
-                <div class="testimony-content">
-                  <div class="testimony-person">
-                    <img src="./images/testimony-headshot.webp" alt="John Doe">
-                    <strong>John Doe</strong>
-                    <p>Lorem ipsum dolor sit.</p>
-                  </div>
-                  <div class="testimony-text">
-                    <blockquote>
-                      Lorem ipsum, dolor sit amet consectetur adipisicing elit. Culpa quae quaerat ducimus a dolorum eos qui aspernatur dolores vitae consequuntur debitis adipisci ipsa incidunt commodi molestiae dignissimos eaque, deserunt eligendi.
-                    </blockquote>
-                  </div>
-                </div>
-              </section>
+        <section class="testimony" id="testimony-section">
+          <h2>Testimony</h2>
+          <div class="testimony-content">
+            <div class="testimony-person">
+              <img src="./images/testimony-headshot.webp" alt="John Doe" />
+              <strong>John Doe</strong>
+              <p>Lorem ipsum dolor sit.</p>
+            </div>
+            <div class="testimony-text">
+              <blockquote>
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Culpa
+                quae quaerat ducimus a dolorum eos qui aspernatur dolores vitae
+                consequuntur debitis adipisci ipsa incidunt commodi molestiae
+                dignissimos eaque, deserunt eligendi.
+              </blockquote>
+            </div>
+          </div>
+        </section>
 
         <!-- Contact Section -->
         <section id="contact" class="contact-section">
@@ -144,58 +128,56 @@
             <!-- Left Text -->
             <div class="left">
               <p>
-                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quod hic officiis sint eveniet, numquam atque quia sunt debitis ad magnam fugiat culpa id suscipit odio recusandae aliquam. Laudantium, unde nihil.
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quod
+                hic officiis sint eveniet, numquam atque quia sunt debitis ad
+                magnam fugiat culpa id suscipit odio recusandae aliquam.
+                Laudantium, unde nihil.
               </p>
             </div>
 
             <!-- Right Form -->
             <div class="right">
               <form id="contact-form">
-                
-                  <label for="name" class="form-label">Name</label>
+                <label for="name" class="form-label">Name</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="name"
+                  placeholder="Your Name"
+                  required
+                />
+
+                <label for="email" class="form-label">Email</label>
+                <input
+                  type="email"
+                  class="form-control"
+                  id="email"
+                  placeholder="Your Email"
+                  required
+                />
+
+                <label for="phone" class="form-label">Phone Number</label>
+                <div class="d-flex">
                   <input
-                    type="text"
+                    type="tel"
                     class="form-control"
-                    id="name"
-                    placeholder="Your Name"
+                    id="phone"
+                    placeholder="Your Phone Number"
+                    style="flex: 1"
                     required
                   />
-                
-                
-                  <label for="email" class="form-label">Email</label>
-                  <input
-                    type="email"
-                    class="form-control"
-                    id="email"
-                    placeholder="Your Email"
-                    required
-                  />
-                
-                
-                  <label for="phone" class="form-label">Phone Number</label>
-                  <div class="d-flex">
-                   
-                    <input
-                      type="tel"
-                      class="form-control"
-                      id="phone"
-                      placeholder="Your Phone Number"
-                      style="flex: 1"
-                      required
-                    />
-                  
                 </div>
-                
-                  <label for="message" class="form-label">Message</label>
-                  <textarea
-                    class="form-control"
-                    id="message"
-                    rows="4"
-                    placeholder="Your Message"
-                    required
-                  ></textarea>
-                
-                <input type="submit" class="submit-btn" value="Send Message"></input>
+
+                <label for="message" class="form-label">Message</label>
+                <textarea
+                  class="form-control"
+                  id="message"
+                  rows="4"
+                  placeholder="Your Message"
+                  required
+                ></textarea>
+
+                <input type="submit" class="submit-btn" value="Send Message" />
               </form>
               <div id="response-message"></div>
             </div>
