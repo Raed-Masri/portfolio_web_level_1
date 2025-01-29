@@ -32,7 +32,7 @@ nav {
 .logo {
   font-size: 1.5rem;
   font-weight: bold;
-  padding-left: 130px;
+  padding-left: 100px;
 }
 
 .nav-links {
@@ -43,7 +43,7 @@ nav {
 
 .nav-links a {
   text-decoration: none;
-  color: #333;
+  color: var(--text-color);
   font-size: 1rem;
   display: flex;
   align-items: center;
@@ -176,7 +176,7 @@ section {
 }
 
 /*-----------------------------------------------------------------------------------------------------------*/
-h1 {
+.project-section h2 {
   text-align: center;
   font-size: 2rem;
   margin-bottom: 20px;
@@ -189,7 +189,7 @@ h1 {
 }
 
 .project-card {
-  background: #fff;
+  background: var(--white);
   border-radius: 8px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   overflow: hidden;
@@ -197,7 +197,7 @@ h1 {
 }
 
 .project-card:hover {
-  transform: translateY(-5px);
+  transform: translateY(-8px);
 }
 
 .project-card img {
@@ -227,12 +227,11 @@ h1 {
 
 .tags {
   display: flex;
-  flex-wrap: wrap;
   gap: 0.5rem;
 }
 
 .tags span {
-  background-color: rgb(226, 223, 223);
+  background-color: var(--background-color);
   color: var(--text-color);
   padding: 0.3rem 0.7rem;
   border-radius: 5px;
@@ -293,7 +292,7 @@ h1 {
 
 .testimony-person strong {
   font-size: 1.1rem;
-  color: #333;
+  color: var(--text-color);
 }
 
 .testimony-text blockquote {
@@ -369,9 +368,7 @@ h1 {
     grid-template-columns: 1fr;
     text-align: center;
   }
-  .hero-section img {
-    margin: 0 auto;
-  }
+
   .hero-section .buttons {
     justify-content: center;
   }
